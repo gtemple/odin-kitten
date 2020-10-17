@@ -1,0 +1,11 @@
+<h1>Cute balls of fur</h1>
+
+<%= link_to 'Add ball of fur', new_kitten_path %>
+
+<ul>
+  <% @kittens.each do |k| %>
+    <li>
+      <%= link_to k.name, kitten_path(k.id) %>
+    </li>
+  <% end %>
+</ul>

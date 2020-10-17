@@ -10,6 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_10_17_154736) do
+
+  create_table "kittens", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.string "cuteness"
+    t.string "softness"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
