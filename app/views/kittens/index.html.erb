@@ -6,6 +6,8 @@
   <% @kittens.each do |k| %>
     <li>
       <%= link_to k.name, kitten_path(k.id) %>
+      
+      <%= link_to 'Delete furball', kitten_path(k), method: 'delete', data: {confirm: 'exile kitty?'} %>
     </li>
   <% end %>
 </ul>
